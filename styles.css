@@ -1,0 +1,119 @@
+:root{
+    --bgcolor :white;
+    --numkeycol:white;
+    --numkeytext:black;
+    --operkeycol:darkorange;
+    --operkeytext:white;
+    --calc-back-col:oldlace;
+    --iconcolor :black;
+}
+.dark-theme{
+    --bgcolor :black;
+    --numkeycol:black;
+    --numkeytext:white;
+    --operkeycol:rgb(16, 25, 114);
+    --operkeytext:white;
+    --calc-back-col:rgb(56, 54, 50);
+    --iconcolor :white;
+}
+
+body{
+    background-color: var(--bgcolor);
+}
+
+#calculator{
+    height: 80vh;
+    width: 30vw;
+    background-color:var(--calc-back-col);
+    margin-left: 35vw;
+    margin-right: 35vw;
+    margin-top: 10vh;
+    min-width: 4in;
+    min-height: 5in;
+    border-radius: 3%;
+}
+
+
+#display-container{
+    overflow-x: clip;
+    display: block;
+    width: 100%;
+    height: 13.5%;
+    max-height: 13.5%;
+    margin-right: 2px;
+    padding-bottom: -2%;
+    text-align: center;
+    
+}
+#equal{
+    display: inline-block;
+    height: 15.6%;
+    width: 47%;
+    margin:1%;
+}
+.button{
+    cursor: pointer;
+    display: inline-block;
+    height: 15.6%;
+    width: 23%;
+    margin-left: 0.8%;
+    text-align: center;
+    margin-top: 1%;
+    margin-bottom: 1%;
+    align-items: baseline;
+    border-radius: 20%;
+}
+
+p{
+    text-align: right;
+    font-size: 3rem;
+    font-family: -webkit-pictograph;
+    color: var(--numkeytext);
+    /* align-items: baseline; */
+    padding-right: 2%;
+    margin-top: 10px;
+}
+.color-white{
+    background-color: var(--numkeycol);
+    
+}
+.color-white span{
+    color: var(--numkeytext);
+
+}
+.color-red{
+    background-color: var(--operkeycol);
+}
+.color-red span{
+    color:var(--operkeytext);
+}
+span{
+    font-size: 3rem;
+    text-align: center;
+    align-items: center;
+    font-family: -webkit-pictograph;
+}
+
+#icon-cont {
+    cursor: pointer;
+    position: absolute;
+    display: inline-block;
+    color: white;
+    
+    text-align: right;
+    margin-left: 94%;
+    margin-top: -3%;
+}
+#icon{
+    height: 4rem;
+    width: 4rem;
+}
+
+@media screen and (max-width:650px) {
+    #calculator{
+        margin-left: 0 ;
+    }
+    #icon{
+        margin-right: 10px
+    }
+}
